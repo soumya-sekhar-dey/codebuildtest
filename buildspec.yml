@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+  pre_build:
+    commands:
+      - echo "Installing dependencies..."
+      # If you have any dependencies, you can install them here using pip
+      # For example:
+      # - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Building the project..."
+      # You may run any build commands here if necessary
+      # For example:
+      # - python build.py
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+      # You can add any post-build commands here if needed
+      # For example:
+      # - python test.py
+artifacts:
+  files:
+    - '**/*'
